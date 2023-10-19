@@ -1,4 +1,3 @@
-#Waiter 
 #!/bin/python3
 
 import math
@@ -20,7 +19,6 @@ def waiter(number, q):
     #
     # Write your code here.
     #
-    # 
     # generate the prime numbers
     primegen = [1] * 10000
     prime = []
@@ -28,7 +26,7 @@ def waiter(number, q):
     for i in range(2, 10000):
         if primegen[i] == 1:
             for j in range(i, 10000, i):
-                    primegen[i] = 0
+                primegen[j] = 0
             prime.append(i)
                 
     a = [[] for i in range(q+1)]
