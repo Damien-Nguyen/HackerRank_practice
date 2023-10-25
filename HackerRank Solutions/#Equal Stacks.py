@@ -1,4 +1,3 @@
-#Equal Stacks
 #!/bin/python3
 
 import math
@@ -19,8 +18,8 @@ import sys
 
 def equalStacks(h1, h2, h3):
     # Write your code here
-    
-    h1 = h2[::-1]
+    # reverse elements in the stack
+    h1 = h1[::-1]
     h2 = h2[::-1]
     h3 = h3[::-1]
     
@@ -34,7 +33,7 @@ def equalStacks(h1, h2, h3):
         minheight = min(sum1, sum2, sum3)
         # base case
         if minheight == 0:
-            return 0 
+            return 0        
         
         # general case 
         if minheight < sum1:
