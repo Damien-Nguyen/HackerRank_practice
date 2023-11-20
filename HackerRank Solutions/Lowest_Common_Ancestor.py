@@ -58,7 +58,7 @@ def lca(root, v1, v2):
     while True:
         #if both values are lesser 
         if v1 < root.info and v2 < root.info:
-            root - root.left
+            root = root.left
         # if both values are greater 
         elif v1 > root.info and v2 > root.info:
             root = root.right
