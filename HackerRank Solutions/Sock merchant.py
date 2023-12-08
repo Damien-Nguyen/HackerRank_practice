@@ -1,4 +1,4 @@
-Sales by Match
+Sock merchant
 #!/bin/python3
 
 import math
@@ -6,7 +6,6 @@ import os
 import random
 import re
 import sys
-from collections import Counter 
 
 #
 # Complete the 'sockMerchant' function below.
@@ -19,10 +18,16 @@ from collections import Counter
 
 def sockMerchant(n, ar):
     # Write your code here
-    count, pairs = Counter(ar), 0
-    for i in count:
-        pairs += count[i] // 2
-    return pairs
+    count = 0 
+    d = {}
+    
+    for i in ar:
+        d[i] = d.get(i,0) + 1
+    
+    for i in d.keys():
+        count+= d[i]//2
+        
+    return count
 
 if __name__ == '__main__':
     fptr = open(os.environ['OUTPUT_PATH'], 'w')
